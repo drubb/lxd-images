@@ -49,7 +49,7 @@ apk add nodejs
 npm -g install npm
 curl -o- -L https://yarnpkg.com/install.sh | zsh
 
-# Add a dummy .ssh folder to prevent ssh-agent complains
+# Add a dummy .ssh folder to prevent ssh-agent complaints
 mkdir ~/.ssh
 
 # Cleanup

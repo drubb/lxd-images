@@ -23,7 +23,7 @@ sed -i -e 's/ash/zsh/g' /etc/passwd
 apk add nodejs
 npm -g install npm vue-cli
 
-# Add a dummy .ssh folder to prevent ssh-agent complains
+# Add a dummy .ssh folder to prevent ssh-agent complaints
 mkdir ~/.ssh
 
 # Cleanup

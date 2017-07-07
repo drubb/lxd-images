@@ -22,7 +22,7 @@ sed -i -e 's/ash/zsh/g' /etc/passwd
 # Add Python 2 and build tools
 apk add build-base python2-dev py2-pip
 
-# Add a dummy .ssh folder to prevent ssh-agent complains
+# Add a dummy .ssh folder to prevent ssh-agent complaints
 mkdir ~/.ssh
 
 # Cleanup

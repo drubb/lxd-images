@@ -26,7 +26,7 @@ apk add build-base python3-dev
 ln -s /usr/bin/python3 /usr/bin/python
 ln -s /usr/bin/pip3 /usr/bin/pip
 
-# Add a dummy .ssh folder to prevent ssh-agent complains
+# Add a dummy .ssh folder to prevent ssh-agent complaints
 mkdir ~/.ssh
 
 # Cleanup
