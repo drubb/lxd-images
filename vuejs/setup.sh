@@ -27,4 +27,4 @@ npm -g install npm vue-cli
 mkdir ~/.ssh
 
 # Cleanup
-rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
+rm -rf /var/cache/apk/* /tmp/*

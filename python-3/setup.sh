@@ -30,4 +30,4 @@ ln -s /usr/bin/pip3 /usr/bin/pip
 mkdir ~/.ssh
 
 # Cleanup
-rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
+rm -rf /var/cache/apk/* /tmp/*
