@@ -59,6 +59,9 @@ apk add nodejs
 npm -g install npm
 curl -o- -L https://yarnpkg.com/install.sh | zsh
 
+# Add a dummy .ssh folder to prevent ssh-agent complains
+mkdir ~/.ssh
+
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
 mkdir -p /var/www/html
