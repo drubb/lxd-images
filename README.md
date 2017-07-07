@@ -5,6 +5,7 @@ Collection of LXD images for local development environments
 
 * Drupal 7
 * Drupal 8
+* Node.js
 * Python 2
 * Python 3
 * Vue.js
