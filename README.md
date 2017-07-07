@@ -3,6 +3,7 @@ Collection of LXD images for local development environments
 
 ## Available images:
 
+* Angular 4
 * Drupal 7
 * Drupal 8
 * Node.js
