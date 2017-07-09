@@ -23,9 +23,8 @@ sed -i -e 's/ash/zsh/g' /etc/passwd
 apk add nodejs
 npm -g install npm @angular/cli
 
-# Make the angular server accessible from the host, without port // TODO: needs disable-host-check, too
+# Make the angular server accessible from the host // TODO: needs disable-host-check, too
 ng set defaults.serve.host 0.0.0.0 -g
-ng set defaults.serve.port 80 -g
 
 # Add a dummy .ssh folder to prevent ssh-agent complaints
 mkdir ~/.ssh
