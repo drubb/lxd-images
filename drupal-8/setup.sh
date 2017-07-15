@@ -10,14 +10,6 @@ rc-service networking start
 wget -O /etc/apk/keys/php-alpine.rsa.pub http://php.codecasts.rocks/php-alpine.rsa.pub
 echo "http://php.codecasts.rocks/7.0" >> /etc/apk/repositories
 
-# Install some basic tools needed inside the container
-apk update && apk upgrade
-apk add tzdata
-cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-echo "Europe/Berlin" > /etc/timezone
-apk del tzdata
-apk add curl wget git mc nano openssh-client ssmtp shadow
-
 # Install web server, database and php
 apk add nginx mariadb mariadb-client php7 php7-fpm
 /etc/init.d/mariadb setup
@@ -48,19 +40,6 @@ curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar
 curl -o /usr/local/bin/drupal https://drupalconsole.com/installer
 curl -o /usr/local/bin/drush https://s3.amazonaws.com/files.drush.org/drush.phar
 chmod +x /usr/local/bin/composer /usr/local/bin/drupal /usr/local/bin/drush
-
-# Add zsh / oh-my-zsh and make it the default shell
-apk add zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-sed -i -e 's/ash/zsh/g' /etc/passwd
-
-# Add some frontend tools: node.js, npm and yarn
-apk add nodejs
-npm -g install npm
-curl -o- -L https://yarnpkg.com/install.sh | zsh
-
-# Add a dummy .ssh folder to prevent ssh-agent complaints
-mkdir ~/.ssh
 
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*

@@ -6,15 +6,8 @@ set -e
 # Wait for the network being available
 rc-service networking start
 
-# Install some basic tools needed inside the container
-apk update && apk upgrade
-apk add tzdata
-cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-echo "Europe/Berlin" > /etc/timezone
-apk del tzdata
-apk add curl wget git mc nano openssh-client ssmtp shadow
-
 # Install web server, database and php
+apk update && apk upgrade
 apk add nginx mariadb mariadb-client php5 php5-fpm
 /etc/init.d/mariadb setup -q
 rc-service mariadb start
@@ -39,20 +32,6 @@ rc-update add php-fpm
 curl -o /usr/local/bin/drush https://s3.amazonaws.com/files.drush.org/drush.phar
 chmod +x /usr/local/bin/drush
 
-# Add zsh / oh-my-zsh and make it the default shell
-apk add zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-sed -i -e 's/ash/zsh/g' /etc/passwd
-
-# Add some frontend tools: node.js, npm and yarn
-apk add nodejs
-npm -g install npm
-curl -o- -L https://yarnpkg.com/install.sh | zsh
-
-# Add a dummy .ssh folder to prevent ssh-agent complaints
-mkdir ~/.ssh
-
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
 mkdir -p /var/www/html
-

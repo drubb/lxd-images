@@ -11,5 +11,8 @@ DISABLE_AUTO_UPDATE=true
 plugins=(git npm ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
-# Disable globbing for some commands using version constraints
+# Disable zsh globbing for npm, it's using version constraints
 alias npm='noglob npm'
+
+# Add optional stuff from .zsh-additions, if any
+source .zsh-additions 2> /dev/null || true
