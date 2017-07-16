@@ -18,7 +18,7 @@ apk del tzdata
 
 # Add zsh / oh-my-zsh and make it the default shell
 apk add zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 sed -i -e 's/ash/zsh/g' /etc/passwd
 
 # Add Node.js
