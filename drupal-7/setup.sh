@@ -28,9 +28,10 @@ rc-update add nginx
 rc-update add mariadb
 rc-update add php-fpm
 
-# Add Drush
+# Add Drush with autocompletion
 curl -o /usr/local/bin/drush https://s3.amazonaws.com/files.drush.org/drush.phar
 chmod +x /usr/local/bin/drush
+drush init -n || true
 
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*

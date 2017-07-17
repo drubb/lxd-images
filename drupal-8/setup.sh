@@ -42,6 +42,10 @@ curl -o /usr/local/bin/drupal https://drupalconsole.com/installer
 curl -o /usr/local/bin/drush https://s3.amazonaws.com/files.drush.org/drush.phar
 chmod +x /usr/local/bin/composer /usr/local/bin/drupal /usr/local/bin/drush
 
+# Add autocompletion for Drush and Drupal Console
+drush init -n || true
+drupal init --autocomplete -n
+
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
 mkdir -p /var/www/html

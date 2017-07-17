@@ -6,3 +6,10 @@ export COMPOSER_ALLOW_SUPERUSER=1
 
 # Disable globbing for composer, it's using version constraints
 alias composer='noglob composer'
+
+# Add autocompletion for Drush and Drupal Console
+autoload bashcompinit
+bashcompinit
+source /root/.drush/drush.complete.sh
+drupal init --autocomplete -n
+source /root/.console/console.rc
