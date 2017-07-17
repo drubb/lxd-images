@@ -29,4 +29,5 @@ npm -g install npm
 mkdir ~/.ssh
 
 # Cleanup
+npm -g cache clean --force
 rm -rf /var/cache/apk/* /tmp/*
