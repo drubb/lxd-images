@@ -6,10 +6,6 @@ set -e
 # Wait for the network being available
 rc-service networking start
 
-# Add Python 2, it's a requirement for some angular stuff
-apk update && apk upgrade
-apk add python2
-
 # Install angular cli
 npm -g install @angular/cli --unsafe-perm
 
