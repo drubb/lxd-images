@@ -8,7 +8,7 @@ rc-service networking start
 
 # Install web server, database and php
 apk update && apk upgrade
-apk add nginx mariadb mariadb-client php5 php5-fpm
+apk add nginx mariadb mariadb-client php5 php5-fpm ssmtp
 /etc/init.d/mariadb setup -q
 rc-service mariadb start
 mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY '';"

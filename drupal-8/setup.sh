@@ -11,7 +11,8 @@ wget -O /etc/apk/keys/php-alpine.rsa.pub http://php.codecasts.rocks/php-alpine.r
 echo "http://php.codecasts.rocks/7.0" >> /etc/apk/repositories
 
 # Install web server, database and php
-apk add nginx mariadb mariadb-client php7 php7-fpm
+apk update && apk upgrade
+apk add nginx mariadb mariadb-client php7 php7-fpm ssmtp
 /etc/init.d/mariadb setup
 rc-service mariadb start
 mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY '';"
