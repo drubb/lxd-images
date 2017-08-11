@@ -16,5 +16,5 @@ lxc exec ${CONTAINER} rm /root/setup.sh
 
 # Publish the container as image and delete it
 lxc image delete ${CONTAINER} 2> /dev/null || true
-lxc publish ${CONTAINER} -f --alias=${CONTAINER} description="Angular 4 development environment"
+lxc publish ${CONTAINER} -f --alias=${CONTAINER} description="AngularJS development environment"
 lxc delete ${CONTAINER} -f
