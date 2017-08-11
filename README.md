@@ -12,6 +12,7 @@ Collection of LXD images for local development environments
 * Node.js
 * Python 2
 * Python 3
+* React
 * Vue.js
 
 Work in progress - details follow
