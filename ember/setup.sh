@@ -6,7 +6,7 @@ set -e
 # Wait for the network being available
 rc-service networking start
 
-# Install React cli
+# Install Ember cli
 npm -g install ember-cli
 
 # Cleanup
