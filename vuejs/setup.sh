@@ -10,4 +10,4 @@ rc-service networking start
 npm -g install vue-cli
 
 # Cleanup
-rm -rf /var/cache/apk/* /tmp/*
+npm -g cache clean --force

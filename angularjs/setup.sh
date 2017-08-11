@@ -11,3 +11,6 @@ npm -g install @angular/cli --unsafe-perm
 
 # Make the angular server accessible from the host // TODO: needs disable-host-check, too
 ng set defaults.serve.host 0.0.0.0 -g
+
+# Cleanup
+npm -g cache clean --force
