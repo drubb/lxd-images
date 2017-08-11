@@ -6,7 +6,7 @@ set -e
 # Wait for the network being available
 rc-service networking start
 
-# Install vue cli
+# Install React cli
 npm -g install create-react-app
 
 # Cleanup
