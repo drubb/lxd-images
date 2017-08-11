@@ -7,6 +7,7 @@ Collection of LXD images for local development environments
 * AngularJS
 * Drupal 7
 * Drupal 8
+* Ember
 * Golang
 * LEMP stack
 * Node.js
