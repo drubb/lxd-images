@@ -6,10 +6,6 @@ set -e
 # Wait for the network being available
 rc-service networking start
 
-# Add repositories for php 7.0 / 7.1
-wget -O /etc/apk/keys/php-alpine.rsa.pub http://php.codecasts.rocks/php-alpine.rsa.pub
-echo "http://php.codecasts.rocks/7.1" >> /etc/apk/repositories
-
 # Install web server, database and php
 apk update && apk upgrade
 apk add nginx mariadb mariadb-client php7 php7-fpm ssmtp

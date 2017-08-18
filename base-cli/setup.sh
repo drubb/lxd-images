@@ -22,7 +22,7 @@ git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 sed -i -e 's/ash/zsh/g' /etc/passwd
 
 # Add Node.js
-apk add nodejs
+apk add nodejs-npm
 npm -g install npm
 
 # Add a dummy .ssh folder to prevent ssh-agent complaints

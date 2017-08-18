@@ -17,8 +17,14 @@ mysql -e "DROP DATABASE test; DELETE FROM mysql.user WHERE Host <> '%'; FLUSH PR
 
 # Install additional php extensions required by Drupal or some cli tools
 apk add php5-intl php5-openssl php5-pdo_mysql php5-pdo_sqlite php5-opcache \
-        php5-gd php5-json php5-xml php5-curl php5-phar php5-xdebug php5-zip php5-ctype \
+        php5-gd php5-json php5-xml php5-curl php5-phar php5-zip php5-ctype \
         php5-mcrypt php5-bcmath php5-zlib php5-dom php5-pcntl php5-iconv php5-posix
+
+# Add a symbolic link for the php cli binary
+ln -sf /usr/bin/php5 /usr/bin/php
+
+# XDebug package is missing, for now it needs to be fetched from alpine 3.5 repository
+apk add php5-xdebug --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.5/community --allow-untrusted
 
 # PHP-FPM should run daemonized, using the root user
 sed -i -e 's/--nodaemonize/-R/g' /etc/init.d/php-fpm

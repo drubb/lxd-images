@@ -8,7 +8,7 @@ rc-service networking start
 
 # Add build tools
 apk update && apk upgrade
-apk add build-base
+apk add build-base nodejs-dev
 
 # Cleanup
 rm -rf /var/cache/apk/* /tmp/*

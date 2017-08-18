@@ -7,7 +7,7 @@ set -e
 CONTAINER="base-cli"
 
 # Create a container using alpine 3.5
-lxc launch images:alpine/3.5/amd64 ${CONTAINER}
+lxc launch images:alpine/3.6/amd64 ${CONTAINER}
 
 # Add zsh configuration
 lxc file push .zshrc ${CONTAINER}/root/.zshrc
