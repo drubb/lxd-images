@@ -16,6 +16,7 @@ Collection of LXD images for local development environments
 * React
 * Ruby
 * Vue.js
+* Wordpress
 
 Work in progress - details follow
 
