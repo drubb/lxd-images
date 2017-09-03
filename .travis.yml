@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+script:
+  # Install LXD / LXC
+  - sudo add-apt-repository -y ppa:ubuntu-lxc/lxd-stable;
+  - sudo apt-get -qq update;
+  - sudo apt-get -y install lxd;
+  - sudo lxd init --auto;
+  - sudo usermod -a -G lxd travis;
+  - sudo su travis -c 'lxc network create lxdbr0';
+  - sudo su travis -c 'lxc network attach-profile lxdbr0 default eth0';
+  # Build all containers
+  - sh build-all.sh
