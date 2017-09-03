@@ -1,4 +1,7 @@
 # LXD images
+
+[![Build Status](https://travis-ci.org/drubb/lxd-images.svg?branch=master)](https://travis-ci.org/drubb/lxd-images)
+
 Collection of LXD images for local development environments
 
 ## Available images:
