@@ -1,0 +1,8 @@
+# Add global composer binary to the path
+export PATH="$PATH:/root/.composer/vendor/bin"
+
+# Composer may run as root
+export COMPOSER_ALLOW_SUPERUSER=1
+
+# Disable globbing for composer, it's using version constraints
+alias composer='noglob composer'
