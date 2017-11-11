@@ -1,0 +1,16 @@
+[mysqld]
+innodb_buffer_pool_size=128M
+innodb_flush_log_at_trx_commit=2
+bind-address=0.0.0.0
+query_cache_size=16M
+query_cache_limit=4M
+key_buffer_size=64K
+max_connections=20
+max_allowed_packet=64M
+
+[mysql]
+max_allowed_packet=64M
+
+[mysqldump]
+max_allowed_packet=64M
+quick
