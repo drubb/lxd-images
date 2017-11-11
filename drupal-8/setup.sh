@@ -40,7 +40,7 @@ chmod +x /usr/local/bin/composer /usr/local/bin/drupal /usr/local/bin/drush
 
 # Add autocompletion for Drush and Drupal Console
 drush init -n || true
-drupal init --autocomplete -n
+drupal init --autocomplete -n || true
 
 # Cleanup
 rm -rf /var/www/localhost /var/cache/apk/* /tmp/*
