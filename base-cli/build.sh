@@ -19,5 +19,5 @@ lxc exec ${CONTAINER} rm /root/setup.sh
 
 # Publish the container as image and delete it
 lxc image delete ${CONTAINER} 2> /dev/null || true
-lxc publish ${CONTAINER} -f --alias=${CONTAINER} description="Basic cli container for development environments"
+lxc publish ${CONTAINER} -f --alias=${CONTAINER} description="Basic cli image for development environments"
 lxc delete ${CONTAINER} -f
