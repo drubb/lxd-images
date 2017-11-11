@@ -15,7 +15,7 @@ mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY '';"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION;"
 mysql -e "DROP DATABASE test; DELETE FROM mysql.user WHERE Host <> '%'; FLUSH PRIVILEGES;"
 
-# Install additional php extensions required by Drupal or some cli tools
+# Install additional php extensions required by various apps
 apk add php7-intl php7-openssl php7-pdo_mysql php7-pdo_sqlite php7-opcache \
         php7-gd php7-json php7-xml php7-curl php7-phar php7-xdebug php7-zip php7-ctype \
         php7-mcrypt php7-bcmath php7-zlib php7-dom php7-pcntl php7-iconv php7-posix \
