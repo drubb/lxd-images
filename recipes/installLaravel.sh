@@ -19,6 +19,6 @@ installLaravel() {
 command -v cgr > /dev/null || (echo "installLaravel recipe requires cgr, missing"; exit 1)
 
 # Install Laravel CLI
-/root/.composer/vendor/bin/cgr "laravel/installer" "laravel/lumen-installer"
+cgr "laravel/installer" "laravel/lumen-installer"
 
 }
