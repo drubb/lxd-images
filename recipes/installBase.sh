@@ -22,5 +22,6 @@ git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 sed -i 's/ash/zsh/g' /etc/passwd
 npm -g install npm
 mkdir ~/.ssh
+touch ~/.z
 cp /config/zsh /root/.zshrc
 }
