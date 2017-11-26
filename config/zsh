@@ -1,0 +1,11 @@
+export TERM=xterm-256color
+export SHELL=/bin/zsh
+export ZSH=/root/.oh-my-zsh
+export ZSH_THEME=essembeh
+DISABLE_AUTO_UPDATE=true
+plugins=(git npm ssh-agent z)
+source $ZSH/oh-my-zsh.sh
+alias npm='noglob npm'
+autoload bashcompinit
+bashcompinit
+source .zsh-additions 2> /dev/null || true

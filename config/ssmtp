@@ -1,0 +1,11 @@
+# SMTP server for outgoing mails
+mailhub=smtp.server:port
+AuthMethod=LOGIN
+AuthUser=smtp.user
+AuthPass=smtp.pass
+UseTLS=YES
+UseSTARTTLS=YES
+FromLineOverride=NO
+
+# E-Mail destination for system mails to root user
+root=admin@example.com

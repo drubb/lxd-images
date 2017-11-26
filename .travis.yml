@@ -10,5 +10,5 @@ script:
   - sudo usermod -a -G lxd travis;
   - sudo su travis -c 'lxc network create lxdbr0';
   - sudo su travis -c 'lxc network attach-profile lxdbr0 default eth0';
-  # Build all containers
+  # Build all images
   - sudo su travis -c 'sh build-all.sh';

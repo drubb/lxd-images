@@ -1,7 +1,0 @@
-# Add autocompletion for Wordpress CLI
-autoload bashcompinit
-bashcompinit
-source /root/wp-completion.bash
-
-# Allow Wordpress CLI to be run as root
-alias wp='wp --allow-root'

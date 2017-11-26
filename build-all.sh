@@ -1,10 +1,14 @@
 #!/bin/sh
 
-# Exit the script if any command fails
-set -e
+set -ex
 
-# Build the base image
-cd base-cli && sh build.sh && cd ..
+#
+# LXD images script: Build all images
+#
+# This script is used to build all images in the images sub folder at once
+#
 
-# Build all derived images
-find . -maxdepth 1 -type d -not -name "base-cli" \( ! -name . \) -exec sh -c "cd '{}' && sh build.sh" \;
+# Build all images found in the images sub folder
+cd images
+find . -maxdepth 1 -type d \( ! -name . \) -exec sh -c "cd '{}' && sh ../build.sh" \;
+cd ..

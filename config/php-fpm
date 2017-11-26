@@ -1,0 +1,12 @@
+[global]
+log_level = notice
+
+[www]
+user = root
+listen = [::]:9000
+catch_workers_output = yes
+clear_env = no
+security.limit_extensions = .php
+
+pm = static
+pm.max_children = 2

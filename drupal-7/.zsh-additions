@@ -1,4 +1,0 @@
-# Add autocompletion for Drush
-autoload bashcompinit
-bashcompinit
-source /root/.drush/drush.complete.sh
