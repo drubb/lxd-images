@@ -14,3 +14,7 @@ max_allowed_packet=64M
 [mysqldump]
 max_allowed_packet=64M
 quick
+
+[client]
+user=mysqluser
+password=mysqlpass
