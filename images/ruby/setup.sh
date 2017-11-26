@@ -10,7 +10,7 @@
 echo "Ruby development environment" > /.container
 
 # Fetch the recipes collection
-source ../recipes
+source /recipes.sh
 
 # Add variables used in recipes, where applicable
 # TIMEZONE=${TIMEZONE:-"Europe/Berlin"}
