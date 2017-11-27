@@ -5,22 +5,36 @@ server {
     client_max_body_size 0;
 
     access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    fastcgi_index index.php;
+    fastcgi_read_timeout 600s;
+    fastcgi_param PHP_VALUE "error_log=/var/log/nginx/php.log";
 
     root /var/www/html;
-    index index.php;
+    index index.php index.html;
 
-    if (!-e $request_filename) {
-        rewrite ^.*$ /index.php last;
+    location /phpmyadmin {
+        alias /opt/phpmyadmin;
+    }
+
+    location ~ ^/phpmyadmin(.+\.php)$ {
+        alias /opt/phpmyadmin;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_param SCRIPT_FILENAME /opt/phpmyadmin$1;
+        include fastcgi_params;
+    }
+
+    location ~ ^/phpmyadmin/(.*\.(eot|otf|woff|ttf|css|js|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|xls|tar|bmp))$ {
+        alias /opt/phpmyadmin/$1;
+        expires 30d;
+        log_not_found off;
+        access_log off;
     }
 
     location ~ \.php$ {
         fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PHP_VALUE "error_log=/var/log/nginx/php.log";
-        fastcgi_buffers 16 16k;
-        fastcgi_buffer_size 32k;
-        fastcgi_read_timeout 600s;
         include fastcgi_params;
     }
 }
