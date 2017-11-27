@@ -21,6 +21,7 @@ installBase
 installNginx
 installMariaDB
 installPhp7
-installSsmtp
 installComposer
+installPhpMyAdmin
+installSsmtp
 cleanup

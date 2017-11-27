@@ -21,8 +21,9 @@ installBase
 installNginx
 installMariaDB
 installPhp7
-installSsmtp
 installComposer
+installPhpMyAdmin
+installSsmtp
 installDrush
 installDrupalConsole
 cleanup
