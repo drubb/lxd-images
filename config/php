@@ -26,7 +26,7 @@ opcache.fast_shutdown=1
 opcache.enable_cli=1
 
 ; Xdebug
-extension=xdebug.so
+zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_connect_back=1
 xdebug.max_nesting_level=500
