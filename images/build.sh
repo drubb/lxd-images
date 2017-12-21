@@ -6,8 +6,8 @@ set -ex
 # Get the container name (default: current directory)
 CONTAINER=${1:-${PWD##*/}}
 
-# Create a container using alpine 3.6
-lxc launch images:alpine/3.6/amd64 ${CONTAINER}
+# Create a container using alpine 3.7
+lxc launch images:alpine/3.7/amd64 ${CONTAINER}
 
 # Copy recipes and configuration files to the container
 lxc file push -rp ../../config/* ${CONTAINER}/config
