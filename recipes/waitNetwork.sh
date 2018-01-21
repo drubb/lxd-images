@@ -9,5 +9,5 @@ set -ex
 #
 
 waitNetwork() {
-sleep 5
+service networking restart
 }
