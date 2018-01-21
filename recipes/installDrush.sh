@@ -20,7 +20,7 @@ DRUSH_VERSION=${DRUSH_VERSION:-"8"}
 command -v cgr > /dev/null || (echo "installDrush recipe requires cgr, missing"; exit 1)
 
 # Install Drush
-cgr drush/drush:^${DRUSH_VERSION}
+cgr --update-no-dev drush/drush:^${DRUSH_VERSION}
 
 # Add Drush command completion for zsh
 cat >> /root/.zsh-additions << "EOF"

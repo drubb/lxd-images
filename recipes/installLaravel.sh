@@ -19,6 +19,6 @@ installLaravel() {
 command -v cgr > /dev/null || (echo "installLaravel recipe requires cgr, missing"; exit 1)
 
 # Install Laravel CLI
-cgr "laravel/installer" "laravel/lumen-installer"
+cgr --update-no-dev laravel/installer laravel/lumen-installer
 
 }

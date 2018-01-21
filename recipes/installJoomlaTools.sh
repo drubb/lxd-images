@@ -19,7 +19,7 @@ command -v cgr > /dev/null || (echo "installJoomlaTools recipe requires cgr, mis
 command -v symfony-autocomplete > /dev/null || (echo "installJoomlaTools recipe requires symfony-autocomplete, missing"; exit 1)
 
 # Install Joomla CLI
-cgr joomlatools/console
+cgr --update-no-dev joomlatools/console
 
 # Generate autocompletion for Joomla CLI
 symfony-autocomplete joomla --shell zsh > /root/.joomla-completion

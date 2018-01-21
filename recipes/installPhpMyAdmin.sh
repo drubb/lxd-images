@@ -23,7 +23,7 @@ DBPASS=${DBPASS:-""}
 command -v composer > /dev/null || (echo "installPhpMyAdmin recipe requires Composer, missing"; exit 1)
 
 # Install PhpMyAdmin
-composer create-project --prefer-dist phpmyadmin/phpmyadmin /opt/phpmyadmin
+composer create-project --no-dev --prefer-dist phpmyadmin/phpmyadmin /opt/phpmyadmin
 
 # Add PhpMyAdmin configuration file
 cp /config/phpmyadmin /opt/phpmyadmin/config.inc.php

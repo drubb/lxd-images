@@ -44,7 +44,7 @@ alias composer='noglob composer'
 alias cgr='noglob cgr'
 source /root/.composer/completion
 EOF
-composer global require consolidation/cgr
-cgr bamarni/symfony-console-autocomplete hirak/prestissimo
+composer --update-no-dev global require consolidation/cgr
+cgr --update-no-dev bamarni/symfony-console-autocomplete hirak/prestissimo
 symfony-autocomplete composer --shell zsh > /root/.composer/completion
 }

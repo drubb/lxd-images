@@ -19,7 +19,7 @@ command -v cgr > /dev/null || (echo "installWPCli recipe requires cgr, missing";
 command -v symfony-autocomplete > /dev/null || (echo "installWPCli recipe requires symfony-autocomplete, missing"; exit 1)
 
 # Install Wordpress CLI
-cgr wp-cli/wp-cli
+cgr --update-no-dev wp-cli/wp-cli
 
 # Generate the autocompletion script
 symfony-autocomplete wp --shell zsh > /root/.wp-completion
