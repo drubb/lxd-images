@@ -5,7 +5,7 @@ script:
   # Install LXD / LXC
   - sudo apt update
   - sudo apt install snapd -y
-  - sudo snap install lxd -y
+  - sudo snap install lxd
   - sudo lxd init --auto;
   - sudo usermod -a -G lxd travis;
   - sudo su travis -c 'lxc network create lxdbr0';
