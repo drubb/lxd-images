@@ -6,6 +6,7 @@ script:
   - sudo apt update
   - sudo apt install snapd -y
   - sudo snap install lxd
+  - sudo . /etc/profile.d/apps-bin-path.sh
   - sudo lxd init --auto;
   - sudo usermod -a -G lxd travis;
   - sudo su travis -c 'lxc network create lxdbr0';
