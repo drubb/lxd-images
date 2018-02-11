@@ -6,10 +6,10 @@ script:
   - sudo apt update
   - sudo apt install snapd -y
   - sudo snap install lxd
-  - export PATH=/snap/bin/:${PATH}
   - sudo lxd waitready --timeout 60
   - sudo lxd init --auto;
   - sudo usermod -a -G lxd travis;
+  - sudo su travis -c 'export PATH=/snap/bin/:${PATH}';
   - sudo su travis -c 'lxc network create lxdbr0';
   - sudo su travis -c 'lxc network attach-profile lxdbr0 default eth0';
   # Build all images
