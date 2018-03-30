@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Exit the script if any command fails
-set -ex
+set -e
 
 # Get the container name (default: current directory)
 CONTAINER=${1:-${PWD##*/}}

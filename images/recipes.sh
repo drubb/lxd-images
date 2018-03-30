@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 #
 # LXD images script: Fetch recipes and environment
