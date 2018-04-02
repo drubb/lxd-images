@@ -11,6 +11,7 @@ max_connections=20
 max_allowed_packet=64M
 
 [mysql]
+auto-rehash
 max_allowed_packet=64M
 
 [mysqldump]
