@@ -14,6 +14,7 @@ set -e
 
 cleanup() {
 echo Final cleanup...
+command -v symfony-autocomplete > /dev/null && cgr remove bamarni/symfony-console-autocomplete
 command -v composer > /dev/null && composer clear-cache &> /dev/null
 command -v npm > /dev/null && npm -g cache clean --force &> /dev/null
 rm -rf /var/cache/apk /tmp > /dev/null
