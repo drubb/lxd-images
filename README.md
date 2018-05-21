@@ -8,6 +8,7 @@ Collection of LXD images for local development environments
 
 * Basic CLI
 * Angular
+* Drupal 6
 * Drupal 7
 * Drupal 8
 * Ember
