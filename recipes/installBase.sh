@@ -18,7 +18,7 @@ TIMEZONE=${TIMEZONE:-UTC}
 ZSHTHEME=${ZSHTHEME:-essembeh}
 
 sed -i '/couple/,+5d' /etc/inittab
-apk --update add curl wget git mc nano openssh-client shadow rsync tzdata zsh nodejs-npm
+apk --update add curl wget git patch mc nano openssh-client shadow rsync tzdata zsh nodejs-npm
 cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
 echo ${TIMEZONE} > /etc/timezone
 apk del tzdata
