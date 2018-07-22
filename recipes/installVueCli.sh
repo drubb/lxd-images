@@ -18,6 +18,6 @@ installVueCli() {
 command -v npm > /dev/null || (echo "installVueCli recipe requires npm, missing"; exit 1)
 
 # Install Vue.js CLI
-npm -g install vue-cli
+npm -g install @vue/cli
 
 }
