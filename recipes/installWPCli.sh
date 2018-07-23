@@ -30,6 +30,6 @@ rm /root/.composer/vendor/bin/wp.bat
 # Create additional settings for zsh
 cat >> /root/.zsh-additions << "EOF"
 source /root/.wp-completion
-alias wp='wp --allow-root --no-color'
+alias wp='wp --allow-root'
 EOF
 }
